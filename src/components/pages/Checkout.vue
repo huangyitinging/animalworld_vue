@@ -86,6 +86,7 @@
                                 <div class="form-group">
                                 <label for="useremail">信箱</label>
                                 <input type="email" class="form-control" name="email" id="useremail"
+                                    :class="{'is-invalid':errors.has('email')}"
                                     v-model="form.user.email" v-validate="'required|email'" placeholder="請輸入 Email">
                                 <span class="text-danger" v-if="errors.has('email')">
                                 {{errors.first('email')}} 

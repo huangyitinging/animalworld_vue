@@ -17,6 +17,9 @@ export default {
 </script>
 <style lang="scss"> 
  @import "./assets/all";
+ body{
+   font-family: Andale Mono, monospace;
+ }
  a{
    cursor:pointer;
    

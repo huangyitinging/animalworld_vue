@@ -13,7 +13,7 @@
     
   >
     <b-carousel-slide
-      img-src="https://i.imgur.com/HYl9N5d.png"
+      img-src="https://i.imgur.com/cqi7CK7.png"
     ></b-carousel-slide>
     <b-carousel-slide
       img-src="https://i.imgur.com/8dlgOWi.png"

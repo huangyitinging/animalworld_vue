@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="form-signin" @submit.prevent="signin">
-      <img src="https://i.imgur.com/Nr5ZZi7.png" width="260px" alt="">
+      <img src="https://i.imgur.com/kKU64oJ.png" width="260px" alt="">
       <h1 class="h4 my-3 text-center font-weight-normal">後台登入</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" id="inputEmail" class="form-control" 

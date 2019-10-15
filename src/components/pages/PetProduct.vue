@@ -104,7 +104,7 @@ export default {
 
 <style>
 .petbanner{
-    background-image: url(https://i.imgur.com/EtgHpzb.png);
+    background-image: url(https://i.imgur.com/wraYLLg.pngg);
     width: 100%;
     height:200px;
     background-position:center;

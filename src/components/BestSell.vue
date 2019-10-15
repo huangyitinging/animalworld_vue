@@ -27,9 +27,9 @@
                     <div class="col-9">
                         <div class="row d-flex justify-content-center my-3">
                             <div class="col-md-6 d-flex justify-content-center align-items-center" style="">
-                                 <div style="background:#ffcccc;" class="product-circle">
-                                     <img src="https://i.imgur.com/lY7pM1N.png" alt="" width="400rem" style="position: absolute; top:20%; right:1%">
-                                 </div>
+                                <div style="background:#ffcccc;" class="product-circle">
+                                    <img src="https://i.imgur.com/lY7pM1N.png" alt="" width="400rem" style="position: absolute; top:20%; right:1%">
+                                </div>
                             </div>
                             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center mt-3">
                                 <div class="h1">01</div>

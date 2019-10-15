@@ -3,62 +3,81 @@
         <loading :active.sync="isLoading"></loading>
         <Alert></Alert>
         <div>
-            <b-navbar type="dark" variant="gray" class="d-flex justify-content-center py-3" style="position:relative">
-                <b-navbar-nav>
-                <ul class="navbar-nav">
-                <li class="d-block mx-4">
-                    <router-link class="nav-link navbarfont-brand" to="/Index">
-                     <img src="https://i.imgur.com/kKU64oJ.png" width="180" height="60" class="d-inline-block align-top" alt="">
-                </router-link>
-                </li>
-                <li class="nav-item px-sm-4 mt-sm-1 mt-3">
-                    <router-link class="nav-link text-dark h5" to="/login">
-                    <div class="text-center">
-                        <i class="far fa-user-circle mr-sm-2"></i>
-                    </div>
-                    <h5 class="d-sm-block d-none">登入</h5> 
-                    </router-link>
-                </li>
-                <li class="nav-item px-sm-4 mt-sm-1 mt-3" >
-                   <router-link class="nav-link text-dark h5" to="/shoppingcart">
-                        <div class="text-center" style="position:relative">
-                            <i class="fas fa-shopping-cart mr-sm-2"></i>
-                             <span class="badge badge-pill badge-danger rounded-circle"
-                             v-if="cart.length"
-                            >{{cart.length}}</span>
+           <div class="d-flex justify-content-end bg-primary">
+                   <div class="">
+                             <a class="nav-link px-2 py-1" href="#">
+                                 <i class="fab fa-facebook fa-2x text-white"></i>
+                            </a>
                         </div>
-                         <h5 class="d-sm-block d-none">購物車</h5>
-                    </router-link>
-                </li>
-                </ul>
-                </b-navbar-nav>
-            </b-navbar>
+                        <div class="nav-item">
+                             <a class="nav-link px-2 py-1" href="#">
+                                 <i class="fab fa-twitter-square fa-2x text-white"></i>
+                            </a>
+                        </div>
+                         <div class="nav-item">
+                             <a class="nav-link px-2 py-1" href="#">
+                                 <i class="fab fa-line fa-2x text-white"></i>
+                            </a>
+                    </div>
+              
+           </div>
+           <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light mt-3">
+               <router-link class="nav-link navbarfont-brand ml-md-3" to="/Index">
+                     <img src="https://i.imgur.com/kKU64oJ.png" width="250" height="90" class="d-inline-block align-top" alt="">
+                </router-link>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-4">
+                             <router-link class="nav-link h5" to="/Index">
+                                 <div class="text-center">
+                                    首頁
+                                </div>
+                            </router-link>
+                        </li>
+                        <li class="nav-item px-4">
+                            <router-link class="nav-link h5" to="/petproduct">
+                                <div class="text-center">
+                                    全部商品
+                                </div>
+                            </router-link>
+                        </li>
+                         <li class="nav-item px-4">
+                             <router-link class="nav-link h5" to="/coupon">
+                             <div class="text-center">
+                                 優惠
+                             </div>
+                            </router-link>
+                        </li>
+                    </ul>
+                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <router-link class="nav-link text-muted" to="/login">
+                                <div class="text-center">
+                                    <i class="far fa-user-circle fa-1x"></i>
+                                    <span>LOGIN</span>
+                                </div>
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link text-muted" to="/shoppingcart">
+                                <div class="text-center">
+                                    <i class="fas fa-shopping-cart fa-1x"></i>
+                                    <span>CART</span>
+                                    <span v-if="cart.length !=0">({{cart.length}})</span>
+                                    <span v-if="cart.length == 0">(0)</span>
+                                </div>
+                            </router-link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+           </div>
         </div>
-         <b-navbar toggleable="md" variant="gray" class="bg-md-primary" >
-                   <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-                        <b-collapse id="nav-collapse" is-nav class="rounded">
-                        <b-navbar-nav>
-                            <ul class="navbar-nav d-flex align-items-center">
-                            <li class="nav-item px-4">
-                                <router-link class="nav-link h5 mb-0" to="/Index">
-                                <i class="fas fa-home mr-2"></i>首頁
-                                </router-link>
-                            </li> 
-                            <li class="nav-item px-4">
-                                <router-link class="nav-link h5 mb-0" to="/petproduct">
-                                <i class="fas fa-bone mr-2"></i>寵物館
-                                </router-link>
-                            </li>
-                            <li class="nav-item px-4">
-                                <router-link class="nav-link h5 mb-0" to="/coupon">
-                                <i class="fas fa-ticket-alt mr-2"></i>優惠券
-                                </router-link>
-                            </li>
-                            </ul>
-                        </b-navbar-nav>
-                        </b-collapse>
-                </b-navbar>
+         
           
    
          <router-view></router-view> 
@@ -123,48 +142,15 @@ export default {
 </script>
 
 <style>
+@media (min-width: 991px){
 .navbar{
     padding:0;
+    display: flex;
+    align-items: flex-end;
 }
-.navbar-toggler{
-    position: absolute;
-    top:-80px;
-    right:10px;
 }
-.navbar-light .navbar-nav .nav-link {
-    color: #000;
-}
-@media (min-width: 768px) { 
-    #nav-collapse{
-        background: #ee948a;
-    }
-    .collapse{
-        display: flex;
-        justify-content: center;
-    }   
-    .navbar-light .navbar-nav .nav-link {
-        color: #f7f5f5fd;
-    }
-    .bg-md-primary{
-        margin-left: 15%;
-        margin-right: 15%;
-        margin-top:-20px;
-    }
-}
-.badge{
-    font-size: 12px;
-    position: absolute;
-    top:5px;
-    right:10px;
-}
-.badge-pill{
-    padding: 0.2rem; 
-}
-@media (min-width: 576px){
-    .badge{
-    right:15px;
-    }
-}
+
+
 a{
     text-decoration:none;
 }

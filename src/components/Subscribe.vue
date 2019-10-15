@@ -53,7 +53,6 @@ export default {
     background-image: url(https://i.imgur.com/xJj11Bu.png);
     background-size: center;
     background-position: center;
-    background-attachment: fixed;
     text-align: center;
 }
 @media(max-width: 767px){

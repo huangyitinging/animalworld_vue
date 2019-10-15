@@ -16,17 +16,19 @@
                         </a>
                     </h5>
                     <p class="card-text">{{cardItem.description}}</p>
-                    <div class="d-flex justify-content-between align-items-baseline">
-                        <div class="h5" v-if="!cardItem.price">{{cardItem.origin_price | currency}}</div> 
-                        <div class="h6 originprice" v-if="cardItem.price">原價 {{cardItem.origin_price | currency}}</div>
-                        <div class="h4 text-danger" v-if="cardItem.price">{{cardItem.price | currency}}</div>
-                    </div>
-                    <div class="d-flex justify-content-end mt-2">
-                        <button type="button" class="btn btn-secondary btn-block text-white"
-                        @click="addtoCart(cardItem.id,1)">
-                        <i class="fas fa-spinner fa-spin" v-if="status.loadingItem === cardItem.id"></i>
-                        <i class="fas fa-shopping-cart mr-2"></i>立即選購
-                        </button>
+                    <div class="d-flex justify-content-between align-items-end">
+                        <div>
+                            <div class="h5" v-if="!cardItem.price">{{cardItem.origin_price | currency}}</div> 
+                            <div class="h6 originprice" v-if="cardItem.price">原價 {{cardItem.origin_price | currency}}</div>
+                            <div class="h4 text-danger" v-if="cardItem.price">{{cardItem.price | currency}}</div>
+                        </div>
+                        <div class="">
+                            <a href="#" class="btn btn-primary rounded-circle text-white p-2"
+                            @click="addtoCart(cardItem.id,1)">
+                            <i class="fas fa-spinner fa-spin" v-if="status.loadingItem === cardItem.id"></i>
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                            </a>
+                        </div>
                     </div>
             </div>
         </div>        
@@ -72,3 +74,6 @@ export default {
     },
 }
 </script>
+<style lang="scss">
+    
+</style>

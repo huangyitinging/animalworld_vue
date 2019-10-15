@@ -20,7 +20,7 @@
                             <div class="h6 origin-price" v-if="product.price">原價{{product.origin_price | currency}}</div>
                             <div class="h4 text-danger" v-if="product.price">{{product.price | currency}}</div>
                         </div>
-                         <select class="form-control my-3" name="" v-model="product.num">
+                         <select class="custom-select my-3" name="" v-model="product.num">
                             <option value="0" disabled selected>請選擇數量</option>
                             <option :value="num" v-for="num in 10" :key="num">
                             選購 {{num}} {{product.unit}}
